@@ -9,56 +9,34 @@ const hamburger = document.getElementById('hamburger');
 const navLinks = document.getElementById('navLinks');
 
 hamburger.addEventListener('click', () => {
-  hamburger.classList.toggle('open');
-  navLinks.classList.toggle('open');
+  const isOpen = hamburger.classList.toggle('open');
+  navLinks.classList.toggle('open', isOpen);
+  hamburger.setAttribute('aria-expanded', String(isOpen));
 });
 
 navLinks.querySelectorAll('a').forEach(link => {
   link.addEventListener('click', () => {
     hamburger.classList.remove('open');
     navLinks.classList.remove('open');
+    hamburger.setAttribute('aria-expanded', 'false');
   });
 });
 
 // ===== REVEAL ON SCROLL =====
-const observer = new IntersectionObserver((entries) => {
+const revealObserver = new IntersectionObserver((entries) => {
   entries.forEach((entry, i) => {
     if (entry.isIntersecting) {
       setTimeout(() => {
         entry.target.classList.add('visible');
       }, i * 80);
-      observer.unobserve(entry.target);
+      revealObserver.unobserve(entry.target);
     }
   });
-}, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+}, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
 
-document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
 
-// ===== CONTACT FORM =====
-document.getElementById('contactForm').addEventListener('submit', (e) => {
-  e.preventDefault();
-  const btn = e.target.querySelector('button[type="submit"]');
-  const name = document.getElementById('name').value.trim();
-  const service = document.getElementById('service').value;
-  const message = document.getElementById('message').value.trim();
-
-  const waText = encodeURIComponent(
-    `Hello Abdessamad,\n\nName: ${name}\nService: ${service}\n\n${message}`
-  );
-  window.open(`https://wa.me/212708027362?text=${waText}`, '_blank');
-
-  btn.textContent = 'Message Sent ✓';
-  btn.style.background = '#3fb950';
-  btn.style.borderColor = '#3fb950';
-  setTimeout(() => {
-    btn.textContent = 'Send Message';
-    btn.style.background = '';
-    btn.style.borderColor = '';
-    e.target.reset();
-  }, 3000);
-});
-
-// ===== ACTIVE NAV LINK =====
+// ===== ACTIVE NAV LINK ON SCROLL =====
 const sections = document.querySelectorAll('section[id]');
 const navItems = document.querySelectorAll('.nav-links a');
 
@@ -70,6 +48,46 @@ const navObserver = new IntersectionObserver((entries) => {
       if (active) active.classList.add('active');
     }
   });
-}, { threshold: 0.4 });
+}, { threshold: 0.35 });
 
 sections.forEach(s => navObserver.observe(s));
+
+// ===== CONTACT FORM — MAILTO =====
+document.getElementById('contactForm').addEventListener('submit', (e) => {
+  e.preventDefault();
+  const btn = e.target.querySelector('button[type="submit"]');
+  const name = document.getElementById('name').value.trim();
+  const service = document.getElementById('service').value;
+  const message = document.getElementById('message').value.trim();
+
+  if (!name || !service || !message) return;
+
+  const subject = encodeURIComponent(`Portfolio Inquiry — ${service}`);
+  const body = encodeURIComponent(
+    `Hello Abdessamad,\n\nName: ${name}\nService: ${service}\n\nMessage:\n${message}\n\n---\nSent from portfolio contact form`
+  );
+
+  window.location.href = `mailto:ab.bencheraik@gmail.com?subject=${subject}&body=${body}`;
+
+  btn.textContent = 'Message Sent ✓';
+  btn.style.background = '#3fb950';
+  btn.style.borderColor = '#3fb950';
+
+  setTimeout(() => {
+    btn.textContent = 'Send Message';
+    btn.style.background = '';
+    btn.style.borderColor = '';
+    e.target.reset();
+  }, 3500);
+});
+
+// ===== BACK TO TOP =====
+const backToTop = document.getElementById('backToTop');
+
+window.addEventListener('scroll', () => {
+  backToTop.classList.toggle('visible', window.scrollY > 400);
+}, { passive: true });
+
+backToTop.addEventListener('click', () => {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+});
