@@ -62,12 +62,11 @@ document.getElementById('contactForm').addEventListener('submit', (e) => {
 
   if (!name || !service || !message) return;
 
-  const subject = encodeURIComponent(`Portfolio Inquiry — ${service}`);
-  const body = encodeURIComponent(
-    `Hello Abdessamad,\n\nName: ${name}\nService: ${service}\n\nMessage:\n${message}\n\n---\nSent from portfolio contact form`
+  const text = encodeURIComponent(
+    `Hello Abdessamad,\n\nName: ${name}\nService: ${service}\n\nMessage:\n${message}`
   );
 
-  window.location.href = `mailto:ab.bencheraik@gmail.com?subject=${subject}&body=${body}`;
+  window.open(`https://wa.me/212708027362?text=${text}`, '_blank');
 
   btn.textContent = 'Message Sent ✓';
   btn.style.background = '#3fb950';
