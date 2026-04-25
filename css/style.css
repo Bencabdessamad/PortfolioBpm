@@ -79,7 +79,7 @@
 html { transition: background-color .3s ease; scroll-behavior: smooth; font-size: 16px; }
 
 body,
-.profile-card, .service-front, .markets-bar,
+.profile-card, .service-front,
 .expertise-card, .timeline-card, .edu-card,
 .why-card, .code-window, .code-title-bar,
 .process-step, .back-to-top, .social-btn,
@@ -499,22 +499,6 @@ section { padding: 100px 0; background: var(--bg); }
 }
 .service-quote-btn:hover { background: rgba(255,255,255,.25); border-color: #fff; }
 
-.markets-bar {
-  display: flex;
-  align-items: center;
-  gap: 20px;
-  flex-wrap: wrap;
-  justify-content: center;
-  background: var(--bg-card);
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  padding: 20px 32px;
-  font-size: .9rem;
-  color: var(--text-2);
-  box-shadow: var(--shadow);
-}
-.market-label { color: var(--text-3); font-weight: 600; }
-
 /* ===== EXPERTISE ===== */
 .expertise-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
 .expertise-card {
@@ -761,6 +745,63 @@ section { padding: 100px 0; background: var(--bg); }
 [data-theme="dark"] .btn-submit { background: #1B5EA6; color: #ffffff !important; }
 @media (max-width: 600px) { .form-row { grid-template-columns: 1fr; } }
 
+/* ===== MARKETS ===== */
+#markets { background: var(--bg); }
+.markets-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.2rem;
+  margin-top: 2.5rem;
+}
+.market-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 1.5rem;
+  transition: all 0.3s;
+}
+.market-card:hover {
+  border-color: #1B5EA6;
+  box-shadow: 0 8px 24px rgba(27,94,166,0.12);
+  transform: translateY(-3px);
+}
+.market-card-highlight {
+  background: #1B5EA6;
+  border-color: #1B5EA6;
+}
+.market-card-highlight h3 { color: #ffffff !important; }
+.market-card-highlight .country-tag {
+  background: rgba(255,255,255,0.2);
+  color: #ffffff;
+}
+.market-header {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  margin-bottom: 1rem;
+}
+.market-icon { font-size: 1.5rem; }
+.market-header h3 {
+  font-family: 'Syne', sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text);
+}
+.market-countries { display: flex; flex-wrap: wrap; gap: 0.4rem; }
+.country-tag {
+  background: var(--accent-bg);
+  color: #1B5EA6;
+  padding: 0.3rem 0.7rem;
+  border-radius: 100px;
+  font-size: 0.78rem;
+  font-weight: 500;
+}
+[data-theme="dark"] .country-tag {
+  background: rgba(27,94,166,0.2);
+  color: #60a5fa;
+}
+@media (max-width: 1024px) { .markets-grid { grid-template-columns: repeat(2, 1fr); } }
+
 /* ===== FOOTER ===== */
 #footer { background: var(--bg-card); border-top: 1px solid var(--border); padding: 40px 0; }
 .footer-inner { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 20px; }
@@ -875,7 +916,7 @@ section { padding: 100px 0; background: var(--bg); }
   .expertise-grid { grid-template-columns: 1fr; }
   .process-steps { grid-template-columns: 1fr; }
   .education-grid { grid-template-columns: 1fr; }
-  .markets-bar { justify-content: flex-start; gap: 12px; }
+  .markets-grid { grid-template-columns: 1fr; }
   .hero-stats { gap: 20px; }
   .hero-actions { flex-direction: column; align-items: stretch; }
   .hero-actions .btn { justify-content: center; }
