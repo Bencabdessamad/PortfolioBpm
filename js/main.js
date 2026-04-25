@@ -52,34 +52,6 @@ const navObserver = new IntersectionObserver((entries) => {
 
 sections.forEach(s => navObserver.observe(s));
 
-// ===== CONTACT FORM — MAILTO =====
-document.getElementById('contactForm').addEventListener('submit', (e) => {
-  e.preventDefault();
-  const btn = e.target.querySelector('button[type="submit"]');
-  const name = document.getElementById('name').value.trim();
-  const service = document.getElementById('service').value;
-  const message = document.getElementById('message').value.trim();
-
-  if (!name || !service || !message) return;
-
-  const text = encodeURIComponent(
-    `Hello Abdessamad,\n\nName: ${name}\nService: ${service}\n\nMessage:\n${message}`
-  );
-
-  window.open(`https://wa.me/212708027362?text=${text}`, '_blank');
-
-  btn.textContent = 'Message Sent ✓';
-  btn.style.background = '#3fb950';
-  btn.style.borderColor = '#3fb950';
-
-  setTimeout(() => {
-    btn.textContent = 'Send Message';
-    btn.style.background = '';
-    btn.style.borderColor = '';
-    e.target.reset();
-  }, 3500);
-});
-
 // ===== THEME TOGGLE =====
 const themeToggle = document.getElementById('themeToggle');
 const savedTheme = localStorage.getItem('theme') || 'light';

@@ -560,28 +560,44 @@
 
         <div class="contact-form-wrap reveal">
           <h3>Send a Message</h3>
-          <form class="contact-form" id="contactForm" novalidate>
-            <div class="form-group">
-              <label for="name">Your Name</label>
-              <input type="text" id="name" name="name" placeholder="John Smith" required autocomplete="name" />
+
+          <div data-fs-success style="display:none;padding:1rem;background:#10b981;color:white;border-radius:10px;text-align:center;font-weight:500;margin-bottom:16px;">
+            ✅ Message sent successfully! I'll get back to you soon.
+          </div>
+          <div data-fs-error style="display:none;padding:1rem;background:#ef4444;color:white;border-radius:10px;text-align:center;margin-bottom:16px;"></div>
+
+          <form id="contact-form" method="POST">
+            <div class="form-row">
+              <div class="form-group">
+                <label>Full Name</label>
+                <input type="text" name="name" required placeholder="John Doe" data-fs-field />
+                <span data-fs-error="name"></span>
+              </div>
+              <div class="form-group">
+                <label>Company</label>
+                <input type="text" name="company" placeholder="Your company" />
+              </div>
             </div>
             <div class="form-group">
-              <label for="service">Service Needed</label>
-              <select id="service" name="service" required>
-                <option value="" disabled selected>Select a service…</option>
-                <option value="Workflow Automation">Workflow Automation</option>
-                <option value="SAIL Interface Design">SAIL Interface Design</option>
-                <option value="Enterprise Integrations">Enterprise Integrations</option>
-                <option value="Security &amp; SSO Migration">Security &amp; SSO Migration</option>
-                <option value="AI-Powered BPM">AI-Powered BPM</option>
-                <option value="Other / Custom">Other / Custom</option>
+              <label>Service Needed</label>
+              <select name="service" required data-fs-field>
+                <option value="">Select a service...</option>
+                <option>Workflow Automation</option>
+                <option>SAIL Interface Design</option>
+                <option>Enterprise Integrations</option>
+                <option>Security &amp; SSO Migration</option>
+                <option>AI-Powered BPM</option>
+                <option>Full Digital Transformation</option>
+                <option>Other</option>
               </select>
             </div>
             <div class="form-group">
-              <label for="message">Message</label>
-              <textarea id="message" name="message" rows="5" placeholder="Describe your project or ask a question…" required></textarea>
+              <label>Message</label>
+              <textarea name="message" required placeholder="Describe your project..." data-fs-field></textarea>
+              <span data-fs-error="message"></span>
             </div>
-            <button type="submit" class="btn btn-primary btn-full">Send Message</button>
+            <input type="hidden" name="_subject" value="New Project Inquiry - Appian BPM Portfolio" />
+            <button type="submit" class="btn-submit" data-fs-submit-btn>Send Message →</button>
           </form>
         </div>
 
@@ -617,5 +633,12 @@
   <button class="back-to-top" id="backToTop" aria-label="Back to top">↑</button>
 
   <script src="js/main.js"></script>
+  <script>
+    window.formspree = window.formspree || function() {
+      (formspree.q = formspree.q || []).push(arguments);
+    };
+    formspree('initForm', { formElement: '#contact-form', formId: 'mkokylpj' });
+  </script>
+  <script src="https://unpkg.com/@formspree/ajax@1" defer></script>
 </body>
 </html>

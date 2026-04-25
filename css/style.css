@@ -718,6 +718,17 @@ section { padding: 100px 0; background: var(--bg); }
 .form-group textarea { resize: vertical; min-height: 120px; }
 .form-group input::placeholder,
 .form-group textarea::placeholder { color: var(--text-3); }
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+[data-fs-error="name"], [data-fs-error="message"] { display: block; font-size: .8rem; color: #ef4444; margin-top: 4px; }
+.btn-submit {
+  width: 100%; padding: 14px 24px; border-radius: 10px;
+  background: var(--blue); color: #fff; border: 1.5px solid var(--blue);
+  font-size: 1rem; font-weight: 600; cursor: pointer; letter-spacing: .02em;
+  transition: var(--transition);
+}
+.btn-submit:hover { background: var(--accent); border-color: var(--accent); transform: translateY(-2px); }
+.btn-submit:disabled { opacity: .6; cursor: not-allowed; transform: none; }
+@media (max-width: 600px) { .form-row { grid-template-columns: 1fr; } }
 
 /* ===== FOOTER ===== */
 #footer { background: var(--bg-card); border-top: 1px solid var(--border); padding: 40px 0; }
