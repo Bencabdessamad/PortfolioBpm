@@ -1,3 +1,37 @@
+// ===== LOADING SCREEN =====
+window.addEventListener('load', () => {
+  const loader = document.getElementById('loader');
+  const bar = document.getElementById('loaderBar');
+
+  if (!loader || !bar) return;
+
+  let progress = 0;
+  const interval = setInterval(() => {
+    progress += Math.random() * 15 + 5;
+    if (progress >= 100) {
+      progress = 100;
+      clearInterval(interval);
+      setTimeout(() => {
+        loader.classList.add('hidden');
+        setTimeout(() => loader.remove(), 700);
+      }, 300);
+    }
+    bar.style.width = progress + '%';
+  }, 80);
+
+  setTimeout(() => {
+    loader.classList.add('hidden');
+    setTimeout(() => loader.remove(), 700);
+  }, 3000);
+});
+
+document.body.style.overflow = 'hidden';
+window.addEventListener('load', () => {
+  setTimeout(() => {
+    document.body.style.overflow = '';
+  }, 1800);
+});
+
 // ===== NAV SCROLL =====
 const navbar = document.getElementById('navbar');
 window.addEventListener('scroll', () => {
