@@ -86,6 +86,100 @@ backToTop.addEventListener('click', () => {
   window.scrollTo({ top: 0, behavior: 'smooth' });
 });
 
+// ===== STATS COUNTER =====
+function animateCounter(el) {
+  const target = parseInt(el.closest('.stat-card').dataset.target);
+  const duration = 2000;
+  const step = target / (duration / 16);
+  let current = 0;
+  const timer = setInterval(() => {
+    current += step;
+    if (current >= target) {
+      current = target;
+      clearInterval(timer);
+    }
+    el.textContent = Math.floor(current);
+  }, 16);
+}
+
+const statsObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.querySelectorAll('.counter').forEach(animateCounter);
+      statsObserver.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.3 });
+
+const statsSection = document.getElementById('stats');
+if (statsSection) statsObserver.observe(statsSection);
+
+// ===== BPMN INTERACTIVE DEMO =====
+const nodeInfo = {
+  'node-start': {
+    title: '🟢 Start Event — Process Triggered',
+    desc: 'In Appian, a process starts when a user submits a form, an API call is received, or a scheduled timer fires. The SAIL interface captures the initial data.'
+  },
+  'node-validate': {
+    title: '⚙️ Validate Data — Expression Rules',
+    desc: 'Appian Expression Rules validate the submitted data in real-time. Business rules check completeness, formatting, and authorization before proceeding.'
+  },
+  'node-gateway': {
+    title: '✦ XOR Gateway — Decision Point',
+    desc: 'An exclusive gateway routes the process based on conditions. If approved → continue. If rejected → loop back. This is the heart of intelligent BPM routing.'
+  },
+  'node-approve': {
+    title: '✅ Manager Approval — Human Task',
+    desc: 'Appian assigns a task to the manager with deadline and escalation. If no action within SLA, the process auto-escalates to the next level (exception handling).'
+  },
+  'node-notify': {
+    title: '🔔 Notify User — Automated Action',
+    desc: 'Appian automatically sends email/push notifications, updates the Appian Record, triggers REST API calls to external systems like SAP or ServiceNow.'
+  },
+  'node-end': {
+    title: '⏹ Process Complete — Audit Trail',
+    desc: 'The process ends with a complete audit trail. All actions, decisions, and timestamps are logged in Appian for compliance and reporting dashboards.'
+  }
+};
+
+const nodeOrder = ['node-start', 'node-validate', 'node-gateway', 'node-approve', 'node-notify', 'node-end'];
+let currentNode = null;
+
+function activateNode(el) {
+  const nodeId = el.id;
+  const info = nodeInfo[nodeId];
+  if (!info) return;
+
+  if (currentNode && currentNode !== el) {
+    currentNode.classList.remove('active');
+    currentNode.classList.add('completed');
+  }
+
+  const idx = nodeOrder.indexOf(nodeId);
+  document.querySelectorAll('.bpmn-arrow').forEach((arrow, i) => {
+    arrow.classList.toggle('active', i < idx);
+  });
+
+  el.classList.add('active');
+  currentNode = el;
+
+  document.getElementById('infoTitle').textContent = info.title;
+  document.getElementById('infoDesc').textContent = info.desc;
+  document.getElementById('bpmnStatus').textContent =
+    idx === nodeOrder.length - 1
+      ? '🎉 Process completed! This is how Appian BPM works.'
+      : `Step ${idx + 1} of ${nodeOrder.length} — Click next node →`;
+}
+
+function resetBpmn() {
+  document.querySelectorAll('.bpmn-node').forEach(n => n.classList.remove('active', 'completed'));
+  document.querySelectorAll('.bpmn-arrow').forEach(a => a.classList.remove('active'));
+  currentNode = null;
+  document.getElementById('infoTitle').textContent = 'How it works';
+  document.getElementById('infoDesc').textContent = 'This is a simplified Appian BPM workflow. Click each node to walk through the process steps.';
+  document.getElementById('bpmnStatus').textContent = '👆 Click a node to start the process';
+}
+
 // ===== BPMN HERO CANVAS ANIMATION =====
 (function () {
   const canvas = document.getElementById('heroCanvas');
