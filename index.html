@@ -76,14 +76,14 @@
           <span class="line">Engineering</span>
           <span class="line">the invisible.</span>
         </h1>
+        <p class="hero__sub" data-intro="3">Enterprise systems. Intelligent automation. Software built to move businesses forward.</p>
         <p class="hero__lede" data-intro="3">
-          I'm a Software Engineer at CGI in Rabat. I design the processes, integrations and
-          applications that sit behind enterprise operations: Appian BPM workflows, SAP and identity
-          integrations, full-stack and mobile apps, and applied AI that supports operational decisions.
+          I'm a Software Engineer at CGI in Rabat, combining enterprise BPM, full-stack development,
+          system integration and applied AI to turn complex business requirements into reliable digital solutions.
         </p>
         <div class="hero__actions" data-intro="4">
-          <a href="#work" class="btn btn--primary" data-magnetic>Explore my work</a>
-          <a href="#contact" class="btn btn--ghost" data-magnetic>Get in touch</a>
+          <a href="#work" class="btn btn--primary" data-magnetic>Explore my universe</a>
+          <a href="#contact" class="btn btn--ghost" data-magnetic>Let's build something</a>
         </div>
         <ul class="hero__links" data-intro="4" aria-label="Profiles">
           <li><a href="https://www.linkedin.com/in/abdessamad-bencheraik-43935a3a5" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
@@ -114,18 +114,18 @@
               workshop, write the specification and ship the app myself.
             </p>
             <p>
-              Today at CGI I work on enterprise BPM delivery on Appian Cloud for a major international
-              energy company, alongside a Master's in Computer Science and Applied Artificial Intelligence
+              Today at CGI I contribute to enterprise BPM delivery on Appian Cloud for TotalEnergies,
+              alongside a Master's in Computer Science and Applied Artificial Intelligence
               at Mohammed V University.
             </p>
           </div>
 
-          <ol class="thread" aria-label="How I work on a project">
-            <li><strong>Understand</strong><span>Business workshops, requirements analysis, estimation.</span></li>
-            <li><strong>Specify</strong><span>Functional and technical specifications, BPMN models.</span></li>
-            <li><strong>Build</strong><span>Workflows, interfaces, APIs, web and mobile apps.</span></li>
-            <li><strong>Integrate</strong><span>SAP Gateway, REST and SOAP services, SSO and access control.</span></li>
-            <li><strong>Prove</strong><span>Unit and functional tests, UAT, production support.</span></li>
+          <ol class="thread" id="thread" aria-label="My professional journey">
+            <li><strong>Software engineering foundations</strong><span>DUT in Software Engineering and a Professional Bachelor's in Mobile Application Engineering, EST Salé.</span><em class="thread__tag">Java, SQL, JavaScript</em></li>
+            <li><strong>Full-stack and mobile</strong><span>Web and mobile apps at Thinline, an IoT platform at NGSIS, then field apps as a freelancer.</span><em class="thread__tag">React, Vue.js, React Native, Spring Boot</em></li>
+            <li><strong>Applied AI and decision support</strong><span>Rule-based allocation and traffic forecasting for port operations, and a Master's in Applied AI.</span><em class="thread__tag">Python, forecasting</em></li>
+            <li><strong>Enterprise applications and Appian BPM</strong><span>Process applications on Appian Cloud at CGI, from workshop to production support.</span><em class="thread__tag">Appian, BPMN 2.0, SAIL</em></li>
+            <li><strong>System integration and security</strong><span>Connecting processes to SAP and legacy systems, and contributing to SSO on Microsoft Entra ID.</span><em class="thread__tag">SAP Gateway, REST, SOAP, SAML 2.0</em></li>
           </ol>
         </div>
       </div>
@@ -169,7 +169,7 @@
 
           <div class="case__body">
             <dl class="case__facts">
-              <div><dt>Context</dt><dd>Port operations run on vessel calls, berths, equipment and services that must be planned together, often where connectivity is unreliable.</dd></div>
+              <div><dt>Problem</dt><dd>Port operations run on vessel calls, resources and services that must be planned together, often where connectivity is unreliable, and planners need to anticipate traffic rather than react to it.</dd></div>
               <div><dt>My role</dt><dd>Functional analysis, architecture and full-stack development across four modules: users, vessel calls, resources and port services.</dd></div>
               <div><dt>Approach</dt><dd>An offline-first React Native app with local SQLite storage and synchronisation, REST APIs, KPI dashboards and reports.</dd></div>
               <div><dt>Applied AI</dt><dd>A Python rule-based engine that proposes resource allocation, and a traffic forecast built from historical vessel visits, with confidence intervals so planners see the uncertainty.</dd></div>
@@ -206,6 +206,7 @@
               <figcaption>From a tag on the hull to the licence registry, with or without network.</figcaption>
             </figure>
             <dl class="case__facts case__facts--compact">
+              <div><dt>Problem</dt><dd>Confirming a vessel's identity and licence reliably on the ground, including where there is no network.</dd></div>
               <div><dt>My role</dt><dd>Functional analysis and design of the full RFID chain: tags, readers, application and backend.</dd></div>
               <div><dt>Build</dt><dd>An Android app for industrial PDA terminals that reads and writes UHF RFID tags, with bidirectional offline synchronisation.</dd></div>
               <div><dt>Delivery</dt><dd>Field testing with the hardware and delivery of the solution.</dd></div>
@@ -224,6 +225,7 @@
               <figcaption>The app talks to the service desk through a REST layer; a gateway handles OTP and notifications.</figcaption>
             </figure>
             <dl class="case__facts case__facts--compact">
+              <div><dt>Problem</dt><dd>Change requests, tasks and delegations had to be handled away from the desk, securely.</dd></div>
               <div><dt>My role</dt><dd>Requirements gathering and functional specifications, then the architecture linking the app, REST API, SDM backend and notification gateway.</dd></div>
               <div><dt>Build</dt><dd>A cross-platform React Native app with OTP authentication.</dd></div>
               <div><dt>Delivery</dt><dd>Business validation with the client's teams.</dd></div>
@@ -236,12 +238,13 @@
             <header class="case__head">
               <p class="case__kind">CGI</p>
               <h3 id="bpm-title">Enterprise BPM &amp; Integration</h3>
-              <p class="case__summary">Appian Cloud applications for a major international energy company. Described at a public level to respect client confidentiality.</p>
+              <p class="case__summary">Appian Cloud applications for TotalEnergies. Described at a public level: no internal interfaces, data or architecture.</p>
             </header>
             <figure class="diagram" data-diagram="bpm">
               <figcaption>Generic shape of the work, not the client's architecture.</figcaption>
             </figure>
             <dl class="case__facts case__facts--compact">
+              <div><dt>Problem</dt><dd>Business processes that span teams, approvals and systems of record such as SAP.</dd></div>
               <div><dt>Processes</dt><dd>BPMN 2.0 workflows with multi-level validation, exception handling and dynamic task routing.</dd></div>
               <div><dt>Integration</dt><dd>Appian to SAP Gateway over secured REST, SOAP services for legacy systems.</dd></div>
               <div><dt>Identity</dt><dd>Contributed to the single sign-on migration to Microsoft Entra ID (SAML 2.0) and to role-based access control.</dd></div>
@@ -260,6 +263,7 @@
               <figcaption>Sensor readings stored in PostgreSQL and served to a Vue.js dashboard.</figcaption>
             </figure>
             <dl class="case__facts case__facts--compact">
+              <div><dt>Problem</dt><dd>Monitoring environmental conditions continuously instead of through manual readings.</dd></div>
               <div><dt>My role</dt><dd>Needs analysis, technical specifications and development of both tiers.</dd></div>
               <div><dt>Build</dt><dd>Java Spring Boot backend (JPA, Hibernate), Vue.js frontend consuming REST APIs, PostgreSQL schema.</dd></div>
             </dl>
@@ -281,7 +285,7 @@
               <h3>Software Engineer, BPM Developer</h3>
               <p class="timeline__org">CGI Technologies and Solutions, Rabat (hybrid)</p>
               <ul>
-                <li>Requirements workshops, functional and technical specifications for Appian Cloud applications serving a major international energy company.</li>
+                <li>Requirements workshops, functional and technical specifications for Appian Cloud applications serving TotalEnergies.</li>
                 <li>BPMN 2.0 workflows, reusable SAIL interfaces, intelligent forms and KPI dashboards; Records, data models and optimised SQL.</li>
                 <li>Appian to SAP Gateway integration over secured REST; SOAP services for legacy systems.</li>
                 <li>Contribution to the SSO migration to Microsoft Entra ID (SAML 2.0) and to RBAC.</li>
@@ -362,7 +366,7 @@
       <canvas class="contact__canvas" id="coreEcho" aria-hidden="true"></canvas>
       <div class="wrap contact__grid">
         <div class="contact__intro">
-          <h2 class="display" id="contact-title">Have a complex process? Let's engineer the solution.</h2>
+          <h2 class="display" id="contact-title">Have a complex problem? Let's engineer the solution.</h2>
           <p>
             Open to BPM, integration and full-stack roles and projects, remote or hybrid.
             Tell me what the process looks like today and where it hurts.

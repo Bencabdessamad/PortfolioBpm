@@ -380,7 +380,7 @@
       where: [['IoT Monitoring', '#iot'], ['PMIS', '#pmis']]
     },
     {
-      id: 'mob', name: 'Web & Mobile', x: 830, y: 340,
+      id: 'mob', name: 'Web & Mobile Development', x: 830, y: 340,
       text: 'Cross-platform and native apps that keep working in the field, with or without a network.',
       tools: ['React', 'Vue.js', 'React Native', 'Ionic', 'Android', 'Offline-first sync', 'Firebase', 'UHF RFID'],
       where: [['PMIS', '#pmis'], ['Barque Identification', '#barque'], ['Service Desk Manager', '#sdm']]
@@ -392,7 +392,7 @@
       where: [['PMIS case study', '#pmis']]
     },
     {
-      id: 'ops', name: 'Delivery & DevOps', x: 340, y: 490,
+      id: 'ops', name: 'DevOps & Delivery', x: 340, y: 490,
       text: 'How work gets from a workshop to production: analysis, specification, testing and support.',
       tools: ['Requirements workshops', 'Specifications', 'Agile / Scrum', 'Jira', 'Confluence', 'ServiceNow', 'Unit & functional testing', 'Git', 'GitLab', 'Docker', 'Linux'],
       where: [['Career path', '#experience']]
@@ -616,6 +616,17 @@
     figs.forEach(function (f) { figObs.observe(f); });
   } else {
     figs.forEach(function (f) { f.classList.add('is-drawn'); });
+  }
+
+  /* ---------- About journey: light each step as it is reached ---------- */
+  var steps = $$('#thread li');
+  if ('IntersectionObserver' in window && !reduceMotion.matches) {
+    var stepObs = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('is-lit'); stepObs.unobserve(e.target); } });
+    }, { rootMargin: '0px 0px -35% 0px' });
+    steps.forEach(function (li) { stepObs.observe(li); });
+  } else {
+    steps.forEach(function (li) { li.classList.add('is-lit'); });
   }
 
   /* ---------- Timeline progress line ---------- */
