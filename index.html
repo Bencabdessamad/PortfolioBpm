@@ -3,812 +3,434 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Abdessamad Bencheraik — Appian BPM Developer</title>
-  <meta name="description" content="Enterprise Appian BPM Developer specializing in workflow automation, process optimization, and digital transformation for large organizations. Remote worldwide." />
-  <meta property="og:title" content="Abdessamad Bencheraik — Appian BPM Developer" />
-  <meta property="og:description" content="Enterprise Appian BPM Developer specializing in workflow automation, process optimization, and digital transformation for large organizations." />
-  <meta property="og:url" content="https://bencabdessamad.github.io/PortfolioBpm" />
+  <title>Abdessamad Bencheraik — Software Engineer, Enterprise BPM &amp; Applied AI</title>
+  <meta name="description" content="Software Engineer in Rabat, Morocco. Appian BPM, enterprise integration (SAP Gateway, REST, SOAP, Entra ID SSO), full-stack and mobile development, and applied AI for operational decision support." />
+  <meta name="theme-color" content="#04050D" />
+  <link rel="canonical" href="https://bencabdessamad.github.io/PortfolioBpm/" />
+  <meta property="og:title" content="Abdessamad Bencheraik — Engineering the invisible" />
+  <meta property="og:description" content="Enterprise BPM, systems integration, full-stack development and applied AI." />
+  <meta property="og:url" content="https://bencabdessamad.github.io/PortfolioBpm/" />
   <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary" />
 
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='12' fill='%231B5EA6'/><text x='50%25' y='54%25' dominant-baseline='middle' text-anchor='middle' font-family='Arial' font-weight='bold' font-size='26' fill='white'>AB</text></svg>" />
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='16' fill='%2304050D'/><circle cx='32' cy='32' r='9' fill='%23A08BFF'/><ellipse cx='32' cy='32' rx='24' ry='9' fill='none' stroke='%2362E6F0' stroke-width='2.5' transform='rotate(-24 32 32)'/></svg>" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300..800&family=Instrument+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
 
   <link rel="stylesheet" href="css/style.css" />
-  <script>(function(){var t=localStorage.getItem('theme')||'light';document.documentElement.setAttribute('data-theme',t);})();</script>
+  <script>
+    document.documentElement.classList.add('js');
+    setTimeout(function () { document.documentElement.classList.add('is-ready'); }, 2500);
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Abdessamad Bencheraik",
+    "jobTitle": "Software Engineer",
+    "address": { "@type": "PostalAddress", "addressLocality": "Rabat", "addressCountry": "MA" },
+    "worksFor": { "@type": "Organization", "name": "CGI" },
+    "sameAs": [
+      "https://www.linkedin.com/in/abdessamad-bencheraik-43935a3a5",
+      "https://github.com/Bencabdessamad"
+    ]
+  }
+  </script>
 </head>
 <body>
+  <a class="skip-link" href="#main">Skip to content</a>
 
-  <div id="loader">
-    <div class="loader-content">
-      <div class="loader-logo">
-        <span class="loader-ab">AB</span>
-        <span class="loader-dot">.</span>
-      </div>
-      <div class="loader-tagline">Appian BPM Developer</div>
-      <div class="loader-bar-wrap">
-        <div class="loader-bar" id="loaderBar"></div>
-      </div>
-      <div class="loader-flag">🇲🇦</div>
-    </div>
-  </div>
-
-  <!-- ===== NAV ===== -->
-  <nav id="navbar">
-    <div class="nav-container">
-      <a href="#hero" class="nav-logo">AB<span>.</span></a>
-      <ul class="nav-links" id="navLinks">
-        <li><a href="#services">Services</a></li>
+  <!-- ===== Floating navigation ===== -->
+  <header class="nav" id="nav">
+    <a href="#top" class="nav__mark" aria-label="Abdessamad Bencheraik, back to top">
+      <svg viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="5.5" /><ellipse cx="20" cy="20" rx="16" ry="6" transform="rotate(-24 20 20)" /></svg>
+      <span>AB</span>
+    </a>
+    <nav aria-label="Main">
+      <ul class="nav__links" id="navLinks">
+        <li><a href="#about">About</a></li>
         <li><a href="#expertise">Expertise</a></li>
+        <li><a href="#work">Projects</a></li>
         <li><a href="#experience">Experience</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
-      <div class="nav-right">
-        <button id="themeToggle" aria-label="Toggle dark mode" style="width:40px;height:40px;border-radius:50%;border:2px solid #1B5EA6;background:transparent;cursor:pointer;font-size:1.1rem;display:flex;align-items:center;justify-content:center;transition:all 0.3s;">🌙</button>
-        <a href="#contact" class="btn btn-primary nav-hire">Hire Me</a>
-        <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu">
-          <span></span><span></span><span></span>
-        </button>
-      </div>
-    </div>
-  </nav>
+    </nav>
+    <button class="nav__toggle" id="navToggle" aria-expanded="false" aria-controls="navLinks">
+      <span class="sr-only">Menu</span><span class="nav__bars" aria-hidden="true"></span>
+    </button>
+  </header>
 
-  <!-- ===== HERO ===== -->
-  <section id="hero">
-    <div class="hero-bg-grid"></div>
-    <canvas id="heroCanvas"></canvas>
-    <div class="container hero-grid">
+  <main id="main">
 
-      <div class="hero-left">
-        <div class="hero-badge reveal">
-          <span class="badge-flag">🇲🇦</span>
-          First Moroccan Appian BPM Specialist
-        </div>
-        <h1 class="reveal">
-          Enterprise BPM<br /><span class="hero-accent">Automation</span><br />Specialist
+    <!-- ===== Hero ===== -->
+    <section class="hero" id="top" aria-labelledby="hero-title">
+      <canvas class="hero__canvas" id="core" aria-hidden="true"></canvas>
+      <div class="hero__veil" aria-hidden="true"></div>
+
+      <div class="hero__inner">
+        <p class="hero__name" data-intro="1">Abdessamad Bencheraik</p>
+        <h1 class="hero__title" id="hero-title" data-intro="2">
+          <span class="line">Engineering</span>
+          <span class="line">the invisible.</span>
         </h1>
-        <p class="hero-subtitle reveal">Abdessamad Bencheraik · Rabat, Morocco</p>
-        <p class="hero-desc reveal">
-          Enterprise Appian BPM Developer specializing in workflow automation,
-          process optimization, and digital transformation for large organizations.<br />
-          Currently at <strong>CGI Maroc</strong> — serving a major international energy company.
+        <p class="hero__sub" data-intro="3">Enterprise systems. Intelligent automation. Software built to move businesses forward.</p>
+        <p class="hero__lede" data-intro="3">
+          I'm a Software Engineer at CGI in Rabat, combining enterprise BPM, full-stack development,
+          system integration and applied AI to turn complex business requirements into reliable digital solutions.
         </p>
-        <div class="hero-stats reveal">
-          <div class="stat">
-            <span class="stat-num">2+</span>
-            <span class="stat-label">Years Appian</span>
-          </div>
-          <div class="stat">
-            <span class="stat-num">10+</span>
-            <span class="stat-label">Projects</span>
-          </div>
-          <div class="stat">
-            <span class="stat-num">BPM Expert</span>
-            <span class="stat-label">Appian Expert</span>
-          </div>
-          <div class="stat">
-            <span class="stat-num">Remote</span>
-            <span class="stat-label">Worldwide</span>
-          </div>
+        <div class="hero__actions" data-intro="4">
+          <a href="#work" class="btn btn--primary" data-magnetic>Explore my universe</a>
+          <a href="#contact" class="btn btn--ghost" data-magnetic>Let's build something</a>
         </div>
-        <div class="hero-actions reveal">
-          <a href="#services" class="btn btn-primary">View Services</a>
-          <a href="#contact" class="btn btn-outline">Get in Touch</a>
-        </div>
+        <ul class="hero__links" data-intro="4" aria-label="Profiles">
+          <li><a href="https://www.linkedin.com/in/abdessamad-bencheraik-43935a3a5" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+          <li><a href="https://github.com/Bencabdessamad" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+        </ul>
       </div>
 
-      <div class="hero-right reveal">
-        <div class="profile-card">
-          <div class="profile-card-header">
-            <div class="profile-avatar">AB</div>
-            <div class="profile-info">
-              <div class="profile-name">Abdessamad B.</div>
-              <div class="profile-role">Appian BPM Developer</div>
-            </div>
-            <div class="profile-status"><span class="status-dot"></span>Available</div>
+      <p class="hero__legend" aria-hidden="true">
+        Every orbit is a layer I connect: processes, applications, APIs, automation and data.
+        The moving lights are tokens, the way BPMN tracks work flowing through a process.
+      </p>
+
+      <a href="#about" class="hero__scroll" aria-label="Scroll to About">
+        <span aria-hidden="true"></span>
+      </a>
+    </section>
+
+    <!-- ===== About ===== -->
+    <section class="about section" id="about" aria-labelledby="about-title">
+      <div class="wrap">
+        <h2 class="display" id="about-title">From a business need to a system that runs in production.</h2>
+        <div class="about__grid">
+          <div class="about__text">
+            <p>
+              I started in software engineering at the Higher School of Technology in Salé, building web
+              and mobile applications. Freelance work then put me in front of real operational problems:
+              port operations, fishing-licence control, service desk workflows. I learned to run the
+              workshop, write the specification and ship the app myself.
+            </p>
+            <p>
+              Today at CGI I contribute to enterprise BPM delivery on Appian Cloud for TotalEnergies,
+              alongside a Master's in Computer Science and Applied Artificial Intelligence
+              at Mohammed V University.
+            </p>
           </div>
-          <div class="profile-skills">
-            <div class="profile-skill-item">
-              <div class="skill-label-row"><span>Appian BPM</span><span>95%</span></div>
-              <div class="skill-track"><div class="skill-fill" style="--w:95%"></div></div>
-            </div>
-            <div class="profile-skill-item">
-              <div class="skill-label-row"><span>API Integrations</span><span>90%</span></div>
-              <div class="skill-track"><div class="skill-fill" style="--w:90%"></div></div>
-            </div>
-            <div class="profile-skill-item">
-              <div class="skill-label-row"><span>Security &amp; SSO</span><span>85%</span></div>
-              <div class="skill-track"><div class="skill-fill" style="--w:85%"></div></div>
-            </div>
-            <div class="profile-skill-item">
-              <div class="skill-label-row"><span>AI &amp; Automation</span><span>80%</span></div>
-              <div class="skill-track"><div class="skill-fill" style="--w:80%"></div></div>
-            </div>
-          </div>
-          <div class="profile-tags">
-            <span>Appian BPM</span>
-            <span>SAIL</span>
-            <span>BPMN</span>
-            <span>REST APIs</span>
-            <span>SAP Gateway</span>
-            <span>SSO/SAML</span>
-            <span>Applied AI</span>
-          </div>
+
+          <ol class="thread" id="thread" aria-label="My professional journey">
+            <li><strong>Software engineering foundations</strong><span>DUT in Software Engineering and a Professional Bachelor's in Mobile Application Engineering, EST Salé.</span><em class="thread__tag">Java, SQL, JavaScript</em></li>
+            <li><strong>Full-stack and mobile</strong><span>Web and mobile apps at Thinline, an IoT platform at NGSIS, then field apps as a freelancer.</span><em class="thread__tag">React, Vue.js, React Native, Spring Boot</em></li>
+            <li><strong>Applied AI and decision support</strong><span>Rule-based allocation and traffic forecasting for port operations, and a Master's in Applied AI.</span><em class="thread__tag">Python, forecasting</em></li>
+            <li><strong>Enterprise applications and Appian BPM</strong><span>Process applications on Appian Cloud at CGI, from workshop to production support.</span><em class="thread__tag">Appian, BPMN 2.0, SAIL</em></li>
+            <li><strong>System integration and security</strong><span>Connecting processes to SAP and legacy systems, and contributing to SSO on Microsoft Entra ID.</span><em class="thread__tag">SAP Gateway, REST, SOAP, SAML 2.0</em></li>
+          </ol>
         </div>
       </div>
+    </section>
 
-    </div>
-    <div class="hero-scroll-indicator"><span></span></div>
-  </section>
+    <!-- ===== Expertise constellation ===== -->
+    <section class="expertise section" id="expertise" aria-labelledby="expertise-title">
+      <div class="wrap">
+        <h2 class="display" id="expertise-title">Seven domains, one system.</h2>
+        <p class="section__intro">Select a domain to see the tools I use there and where I've applied them.</p>
 
-  <!-- ===== SERVICES ===== -->
-  <section id="services" class="section-light">
-    <div class="container">
-      <div class="section-header reveal">
-        <span class="section-tag">What I Do</span>
-        <h2>Services</h2>
-        <p>Enterprise-grade BPM solutions tailored to your business processes</p>
-      </div>
-      <div class="services-grid">
-
-        <div class="service-card reveal">
-          <div class="service-inner">
-            <div class="service-front">
-              <div class="service-icon">⚙️</div>
-              <h3>Workflow Automation</h3>
-              <p>BPMN design, XOR/AND/OR gateways, exception handling, and end-to-end process orchestration.</p>
-              <div class="service-stack">Appian · BPMN · XOR/AND Gateways</div>
-            </div>
-            <div class="service-back">
-              <div class="service-icon-back">⚙️</div>
-              <h3>Workflow Automation</h3>
-              <p>BPMN design, XOR/AND/OR gateways, exception handling, and end-to-end process orchestration.</p>
-              <a href="#contact" class="service-quote-btn">Learn More →</a>
-            </div>
+        <div class="constellation" id="constellation">
+          <div class="constellation__field">
+            <svg class="constellation__lines" viewBox="0 0 1000 560" preserveAspectRatio="none" aria-hidden="true"></svg>
+            <div class="constellation__nodes" role="tablist" aria-label="Expertise domains"></div>
           </div>
-        </div>
-
-        <div class="service-card reveal">
-          <div class="service-inner">
-            <div class="service-front">
-              <div class="service-icon">🎨</div>
-              <h3>SAIL Interface Design</h3>
-              <p>Smart forms, KPI dashboards, and reusable components for seamless user experiences.</p>
-              <div class="service-stack">SAIL · Records · CDTs · Dashboards</div>
-            </div>
-            <div class="service-back">
-              <div class="service-icon-back">🎨</div>
-              <h3>SAIL Interface Design</h3>
-              <p>Smart forms, KPI dashboards, and reusable components for seamless user experiences.</p>
-              <a href="#contact" class="service-quote-btn">Learn More →</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="service-card reveal">
-          <div class="service-inner">
-            <div class="service-front">
-              <div class="service-icon">🔗</div>
-              <h3>Enterprise Integrations</h3>
-              <p>SAP Gateway, REST/SOAP APIs, and Connected Systems that power real-time data exchange.</p>
-              <div class="service-stack">SAP Gateway · REST · SOAP · JSON/XML</div>
-            </div>
-            <div class="service-back">
-              <div class="service-icon-back">🔗</div>
-              <h3>Enterprise Integrations</h3>
-              <p>SAP Gateway, REST/SOAP APIs, and Connected Systems that power real-time data exchange.</p>
-              <a href="#contact" class="service-quote-btn">Learn More →</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="service-card reveal">
-          <div class="service-inner">
-            <div class="service-front">
-              <div class="service-icon">🔐</div>
-              <h3>Security &amp; SSO Migration</h3>
-              <p>Microsoft Entra ID migration, SAML 2.0, RBAC implementation, and AES-256 encryption.</p>
-              <div class="service-stack">Entra ID · SAML 2.0 · RBAC · JWT</div>
-            </div>
-            <div class="service-back">
-              <div class="service-icon-back">🔐</div>
-              <h3>Security &amp; SSO Migration</h3>
-              <p>Microsoft Entra ID migration, SAML 2.0, RBAC implementation, and AES-256 encryption.</p>
-              <a href="#contact" class="service-quote-btn">Learn More →</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="service-card reveal">
-          <div class="service-inner">
-            <div class="service-front">
-              <div class="service-icon">🤖</div>
-              <h3>AI-Powered BPM</h3>
-              <p>Appian AI features, RAG pipelines, and agentic workflows for intelligent automation.</p>
-              <div class="service-stack">Appian AI · RAG · Agentic Workflows</div>
-            </div>
-            <div class="service-back">
-              <div class="service-icon-back">🤖</div>
-              <h3>AI-Powered BPM</h3>
-              <p>Appian AI features, RAG pipelines, and agentic workflows for intelligent automation.</p>
-              <a href="#contact" class="service-quote-btn">Learn More →</a>
-            </div>
-          </div>
-        </div>
-
-
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== EXPERTISE ===== -->
-  <section id="expertise" class="section-dark">
-    <div class="container">
-      <div class="section-header reveal">
-        <span class="section-tag">Tech Stack</span>
-        <h2>Expertise</h2>
-        <p>Deep specialization across the full Appian ecosystem and beyond</p>
-      </div>
-      <div class="expertise-grid">
-
-        <div class="expertise-card reveal">
-          <div class="expertise-icon">🏗️</div>
-          <h4>Appian Platform</h4>
-          <p>BPMN, SAIL, Records, CDTs, Expression Rules, Business Rules, Plugins, Admin Console, Appian Cloud · Appian Certified</p>
-        </div>
-
-        <div class="expertise-card reveal">
-          <div class="expertise-icon">🔌</div>
-          <h4>Integrations</h4>
-          <p>REST APIs, SOAP, SAP Gateway, Connected Systems, JSON/XML parsing and transformation</p>
-        </div>
-
-        <div class="expertise-card reveal">
-          <div class="expertise-icon">🛡️</div>
-          <h4>Security</h4>
-          <p>RBAC, OAuth2, JWT, AES-256, SAML 2.0, Microsoft Entra ID SSO migration</p>
-        </div>
-
-        <div class="expertise-card reveal">
-          <div class="expertise-icon">💻</div>
-          <h4>Languages</h4>
-          <p>Java, SQL, JavaScript — solid programming fundamentals for custom scripts, queries, and Appian integrations</p>
-        </div>
-
-        <div class="expertise-card reveal">
-          <div class="expertise-icon">🔄</div>
-          <h4>Agile &amp; ITIL</h4>
-          <p>Scrum, Jira, ServiceNow, ITIL framework, sprint planning, and backlog management</p>
-        </div>
-
-        <div class="expertise-card reveal">
-          <div class="expertise-icon">🤖</div>
-          <h4>Applied AI</h4>
-          <p>Master's in progress — AI-powered workflows, RAG, and intelligent process automation</p>
-        </div>
-
-        <div class="expertise-card reveal">
-          <div class="expertise-icon">☁️</div>
-          <h4>DevOps &amp; Cloud</h4>
-          <p>Appian Cloud administration, Git version control, CI/CD pipelines, GitHub Actions</p>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== EXPERIENCE ===== -->
-  <section id="experience">
-    <div class="container">
-      <div class="section-header reveal">
-        <span class="section-tag">Career</span>
-        <h2>Experience</h2>
-        <p>Building enterprise solutions from day one</p>
-      </div>
-      <div class="timeline">
-
-        <!-- 1. CGI Maroc — Full-time -->
-        <div class="timeline-item reveal">
-          <div class="timeline-dot"></div>
-          <div class="timeline-card">
-            <div class="timeline-header">
-              <div>
-                <h3>Appian Developer</h3>
-                <span class="timeline-company">CGI Maroc · Full-time</span>
-              </div>
-              <div class="timeline-meta">
-                <span class="timeline-date">Oct 2024 — Present · 1 yr 7 mos</span>
-                <span class="timeline-badge current">Current</span>
-              </div>
-            </div>
-            <p class="timeline-client">Client: <strong>Major international energy company</strong> · Rabat, Morocco · Hybrid</p>
-            <ul class="timeline-points">
-              <li>Designed and developed enterprise BPM applications on Appian</li>
-              <li>Built complex BPMN workflows with multi-level validation, exception handling and dynamic task routing (XOR, AND, OR gateways)</li>
-              <li>Developed reusable SAIL components, intelligent forms and KPI dashboards</li>
-              <li>Configured Expression Rules and Business Rules for process automation</li>
-              <li>Designed Appian Records, modelled CDTs and complex data relationships</li>
-              <li>Wrote optimized SQL queries for large-volume datasets</li>
-              <li>Architected Appian to SAP Gateway integration via secured REST APIs</li>
-              <li>Implemented SOAP web services for legacy system integrations</li>
-              <li>Implemented RBAC, encryption/decryption for regulatory compliance</li>
-              <li>Automated Excel/Word export pipelines with processed data</li>
-              <li>Managed incidents via ServiceNow and Jira (ITIL framework)</li>
-              <li>Full Scrum ceremonies: stand-ups, sprint planning, retrospectives</li>
-            </ul>
-            <div class="timeline-stack">
-              <span>Appian Cloud</span><span>SAP Gateway</span><span>REST/SOAP</span>
-              <span>ServiceNow</span><span>Jira</span><span>Agile/Scrum</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- 2. CGI Maroc — Internship -->
-        <div class="timeline-item reveal">
-          <div class="timeline-dot"></div>
-          <div class="timeline-card">
-            <div class="timeline-header">
-              <div>
-                <h3>Software Engineer</h3>
-                <span class="timeline-company">CGI Maroc · Internship</span>
-              </div>
-              <div class="timeline-meta">
-                <span class="timeline-date">Apr 2024 — Sep 2024 · 6 mos</span>
-                <span class="timeline-badge internship">Internship</span>
-              </div>
-            </div>
-            <p class="timeline-client">Rabat, Morocco · Hybrid</p>
-            <ul class="timeline-points">
-              <li>Contributed to iOS/Android mobile development and Appian BPM implementations</li>
-              <li>Managed bug fix and feature evolution tickets in TMA context</li>
-              <li>Wrote unit and functional tests to ensure delivery quality</li>
-              <li>Produced technical and end-user documentation</li>
-              <li>Analyzed production issues and proposed optimized solutions</li>
-            </ul>
-            <div class="timeline-stack">
-              <span>Appian</span><span>Java</span><span>iOS</span><span>Android</span>
-              <span>Jira</span><span>ServiceNow</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- 3. Self Employed — Freelance -->
-        <div class="timeline-item reveal">
-          <div class="timeline-dot"></div>
-          <div class="timeline-card">
-            <div class="timeline-header">
-              <div>
-                <h3>Mobile Application Developer</h3>
-                <span class="timeline-company">Self Employed · Freelance</span>
-              </div>
-              <div class="timeline-meta">
-                <span class="timeline-date">Jan 2023 — Dec 2024 · 2 yrs</span>
-                <span class="timeline-badge freelance">Freelance</span>
-              </div>
-            </div>
-            <p class="timeline-client">Rabat, Morocco · Remote</p>
-            <ul class="timeline-points">
-              <li>Specialized React Native developer for enterprise clients (iOS &amp; Android)</li>
-              <li>Designed offline-first architectures with bidirectional sync (SQLite, WatermelonDB, NetInfo) — zero data loss during outages</li>
-              <li>Implemented OAuth2, OTP (TOTP RFC 6238), JWT, AES-256 local encryption via SQLCipher</li>
-              <li>Integrated native SDKs, REST/SOAP APIs and hardware peripherals</li>
-              <li>Built cross-platform apps using MVVM and Clean Architecture patterns</li>
-              <li>Delivered UX/UI following Material Design and iOS HIG guidelines</li>
-              <li>Managed Firebase push notifications and local databases</li>
-            </ul>
-            <div class="timeline-stack">
-              <span>React Native</span><span>SQLite</span><span>WatermelonDB</span>
-              <span>Firebase</span><span>OAuth2</span><span>JWT</span><span>REST/SOAP</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- 4. NGSIS — Internship -->
-        <div class="timeline-item reveal">
-          <div class="timeline-dot"></div>
-          <div class="timeline-card">
-            <div class="timeline-header">
-              <div>
-                <h3>Software Developer</h3>
-                <span class="timeline-company">NGSIS · Internship</span>
-              </div>
-              <div class="timeline-meta">
-                <span class="timeline-date">Apr 2023 — Jun 2023 · 3 mos</span>
-                <span class="timeline-badge internship">Internship</span>
-              </div>
-            </div>
-            <p class="timeline-client">Rabat, Morocco · Remote</p>
-            <ul class="timeline-points">
-              <li>Developed IoT sensor data monitoring system (temperature &amp; humidity)</li>
-              <li>Wrote technical specifications and conducted needs analysis</li>
-              <li>Built backend with Java Spring Boot (JPA, Hibernate)</li>
-              <li>Built frontend with Vue.js, integrated REST APIs using Axios</li>
-              <li>Designed and managed PostgreSQL database schema</li>
-            </ul>
-            <div class="timeline-stack">
-              <span>Spring Boot</span><span>Vue.js</span><span>PostgreSQL</span>
-              <span>REST APIs</span><span>IoT</span><span>Java</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- 5. Thinline Ltd. — Internship -->
-        <div class="timeline-item reveal">
-          <div class="timeline-dot"></div>
-          <div class="timeline-card">
-            <div class="timeline-header">
-              <div>
-                <h3>Web/Mobile Developer</h3>
-                <span class="timeline-company">Thinline Ltd. · Internship</span>
-              </div>
-              <div class="timeline-meta">
-                <span class="timeline-date">Jun 2022 — Aug 2022 · 3 mos</span>
-                <span class="timeline-badge internship">Internship</span>
-              </div>
-            </div>
-            <p class="timeline-client">Rabat, Morocco · On-site</p>
-            <ul class="timeline-points">
-              <li>Analyzed user needs and improved UX/UI for web and mobile products</li>
-              <li>Developed web and mobile applications using React, React Native and Ionic</li>
-              <li>Optimized application performance and implemented new features</li>
-              <li>Collaborated in an Agile team to meet delivery deadlines</li>
-            </ul>
-            <div class="timeline-stack">
-              <span>React</span><span>React Native</span><span>Ionic</span><span>JavaScript</span>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== EDUCATION ===== -->
-  <section id="education" class="section-dark">
-    <div class="container">
-      <div class="section-header reveal">
-        <span class="section-tag">Academic</span>
-        <h2>Education</h2>
-        <p>Strong academic foundation in computer science and engineering</p>
-      </div>
-      <div class="education-grid">
-
-        <div class="edu-card reveal">
-          <div class="edu-icon">🎓</div>
-          <div class="edu-content">
-            <span class="edu-year">Sep 2024 — Jul 2026</span>
-            <h3>Master's — Computer Science &amp; Applied AI</h3>
-            <p>Faculty of Sciences — Mohammed V University, Rabat</p>
-          </div>
-        </div>
-
-        <div class="edu-card reveal">
-          <div class="edu-icon">📘</div>
-          <div class="edu-content">
-            <span class="edu-year">Sep 2023 — Jul 2024</span>
-            <h3>Professional Bachelor's — Mobile Application Engineering</h3>
-            <p>Higher School of Technology Salé<br>Mohammed V University, Rabat</p>
-          </div>
-        </div>
-
-        <div class="edu-card reveal">
-          <div class="edu-icon">📗</div>
-          <div class="edu-content">
-            <span class="edu-year">Sep 2021 — Jul 2023</span>
-            <h3>DUT (University Technology Diploma) — Software Engineering</h3>
-            <p>Higher School of Technology Salé<br>Mohammed V University, Rabat</p>
-          </div>
-        </div>
-
-
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== WHY ME ===== -->
-  <section id="why">
-    <div class="container">
-      <div class="section-header reveal">
-        <span class="section-tag">Differentiators</span>
-        <h2>Why Work With Me?</h2>
-        <p>Not just a developer — a trusted BPM partner</p>
-      </div>
-      <div class="why-layout">
-        <div class="why-cards">
-
-          <div class="why-card reveal">
-            <div class="why-icon">🏆</div>
-            <div>
-              <h4>Pioneer Expertise</h4>
-              <p>First Moroccan Appian Developer — deep, battle-tested knowledge built on real enterprise projects at international scale.</p>
-            </div>
-          </div>
-
-          <div class="why-card reveal">
-            <div class="why-icon">🔒</div>
-            <div>
-              <h4>Security-First Mindset</h4>
-              <p>Every solution built with RBAC, encryption, and compliance in mind. Led full SSO migration to Microsoft Entra ID.</p>
-            </div>
-          </div>
-
-          <div class="why-card reveal">
-            <div class="why-icon">⚡</div>
-            <div>
-              <h4>End-to-End Delivery</h4>
-              <p>From BPMN design to SAP integration to go-live — I own the full delivery cycle without handoff gaps.</p>
-            </div>
-          </div>
-
-          <div class="why-card reveal">
-            <div class="why-icon">🌍</div>
-            <div>
-              <h4>Global Availability</h4>
-              <p>Remote-ready for UAE, Qatar, Saudi Arabia, UK, France and beyond. Async-first with structured Scrum delivery.</p>
-            </div>
-          </div>
-
-        </div>
-        <div class="why-code reveal">
-          <div class="code-window">
-            <div class="code-title-bar">
-              <span class="dot red"></span>
-              <span class="dot yellow"></span>
-              <span class="dot green"></span>
-              <span class="code-filename">workflow.appian</span>
-            </div>
-            <pre class="code-body"><code><span class="c-keyword">const</span> developer = {
-  name:   <span class="c-cond">"Abdessamad Bencheraik"</span>,
-  role:   <span class="c-cond">"Appian BPM Developer"</span>,
-  skills: [
-    <span class="c-cond">"Appian BPM"</span>, <span class="c-cond">"SAIL"</span>,
-    <span class="c-cond">"SAP Integration"</span>,
-    <span class="c-cond">"SSO/SAML"</span>, <span class="c-cond">"BPMN"</span>,
-    <span class="c-cond">"AI"</span>
-  ],
-  focus:  <span class="c-cond">"Enterprise Automation"</span>,
-  remote: <span class="c-keyword">true</span>
-}</code></pre>
-          </div>
+          <div class="constellation__panel" id="domainPanel" role="tabpanel" aria-live="polite"></div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- ===== PROCESS ===== -->
-  <section id="process" class="section-dark">
-    <div class="container">
-      <div class="section-header reveal">
-        <span class="section-tag">How I Work</span>
-        <h2>My Process</h2>
-        <p>Structured delivery from discovery to go-live</p>
-      </div>
-      <div class="process-steps">
+    <!-- ===== Projects ===== -->
+    <section class="work section" id="work" aria-labelledby="work-title">
+      <div class="wrap">
+        <h2 class="display" id="work-title">Selected work.</h2>
+        <p class="section__intro">
+          Case studies from freelance engagements, internships and my current enterprise role.
+          The diagrams are my own architecture illustrations, not screenshots of deployed products.
+        </p>
 
-        <div class="process-step reveal">
-          <div class="step-number">01</div>
-          <h4>Discovery</h4>
-          <p>Understand your business processes, pain points, and integration landscape through structured workshops.</p>
-        </div>
+        <!-- PMIS — flagship -->
+        <article class="case case--flagship" id="pmis" aria-labelledby="pmis-title">
+          <header class="case__head">
+            <p class="case__kind">Flagship freelance project</p>
+            <h3 id="pmis-title">Port Management Information System</h3>
+            <p class="case__summary">
+              An operations system for a port: who arrives, which resources they need, and what traffic to
+              expect next. It combines an offline-first mobile app with Python decision-support services.
+            </p>
+          </header>
 
-        <div class="process-step reveal">
-          <div class="step-number">02</div>
-          <h4>Design</h4>
-          <p>BPMN modeling, SAIL wireframes, and integration architecture — all validated before a single line of code.</p>
-        </div>
+          <div class="case__body">
+            <dl class="case__facts">
+              <div><dt>Problem</dt><dd>Port operations run on vessel calls, resources and services that must be planned together, often where connectivity is unreliable, and planners need to anticipate traffic rather than react to it.</dd></div>
+              <div><dt>My role</dt><dd>Functional analysis, architecture and full-stack development across four modules: users, vessel calls, resources and port services.</dd></div>
+              <div><dt>Approach</dt><dd>An offline-first React Native app with local SQLite storage and synchronisation, REST APIs, KPI dashboards and reports.</dd></div>
+              <div><dt>Applied AI</dt><dd>A Python rule-based engine that proposes resource allocation, and a traffic forecast built from historical vessel visits, with confidence intervals so planners see the uncertainty.</dd></div>
+            </dl>
 
-        <div class="process-step reveal">
-          <div class="step-number">03</div>
-          <h4>Build &amp; Test</h4>
-          <p>Agile sprints with regular demos. Unit tests, UAT, and regression coverage built in from day one.</p>
-        </div>
-
-        <div class="process-step reveal">
-          <div class="step-number">04</div>
-          <h4>Deploy &amp; Support</h4>
-          <p>Go-live on Appian Cloud, documentation handover, and post-launch support to ensure adoption.</p>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== MARKETS ===== -->
-  <section id="markets">
-    <div class="container">
-      <div class="section-header reveal">
-        <span class="section-tag">Availability</span>
-        <h2>Available Worldwide</h2>
-        <p>Open to Remote and Hybrid opportunities worldwide</p>
-      </div>
-
-      <div class="markets-grid">
-
-        <div class="market-card reveal">
-          <div class="market-header">
-            <span class="market-icon">🌎</span>
-            <h3>Americas</h3>
-          </div>
-          <div class="market-countries">
-            <span class="country-tag">🇺🇸 USA</span>
-            <span class="country-tag">🇨🇦 Canada</span>
-            <span class="country-tag">🇧🇷 Brazil</span>
-          </div>
-        </div>
-
-        <div class="market-card reveal">
-          <div class="market-header">
-            <span class="market-icon">🌍</span>
-            <h3>Europe</h3>
-          </div>
-          <div class="market-countries">
-            <span class="country-tag">🇬🇧 UK</span>
-            <span class="country-tag">🇫🇷 France</span>
-            <span class="country-tag">🇩🇪 Germany</span>
-            <span class="country-tag">🇳🇱 Netherlands</span>
-            <span class="country-tag">🇪🇸 Spain</span>
-            <span class="country-tag">🇧🇪 Belgium</span>
-            <span class="country-tag">🇨🇭 Switzerland</span>
-          </div>
-        </div>
-
-        <div class="market-card reveal">
-          <div class="market-header">
-            <span class="market-icon">🌏</span>
-            <h3>Middle East</h3>
-          </div>
-          <div class="market-countries">
-            <span class="country-tag">🇦🇪 UAE</span>
-            <span class="country-tag">🇶🇦 Qatar</span>
-            <span class="country-tag">🇸🇦 Saudi Arabia</span>
-            <span class="country-tag">🇰🇼 Kuwait</span>
-            <span class="country-tag">🇧🇭 Bahrain</span>
-          </div>
-        </div>
-
-        <div class="market-card reveal">
-          <div class="market-header">
-            <span class="market-icon">🌍</span>
-            <h3>Africa</h3>
-          </div>
-          <div class="market-countries">
-            <span class="country-tag">🇲🇦 Morocco</span>
-            <span class="country-tag">🇪🇬 Egypt</span>
-            <span class="country-tag">🇿🇦 South Africa</span>
-            <span class="country-tag">🇹🇳 Tunisia</span>
-          </div>
-        </div>
-
-        <div class="market-card reveal">
-          <div class="market-header">
-            <span class="market-icon">🌏</span>
-            <h3>Asia Pacific</h3>
-          </div>
-          <div class="market-countries">
-            <span class="country-tag">🇸🇬 Singapore</span>
-            <span class="country-tag">🇦🇺 Australia</span>
-            <span class="country-tag">🇮🇳 India</span>
-            <span class="country-tag">🇯🇵 Japan</span>
-          </div>
-        </div>
-
-        <div class="market-card market-card-highlight reveal">
-          <div class="market-header">
-            <span class="market-icon">🌐</span>
-            <h3>Work Mode</h3>
-          </div>
-          <div class="market-countries">
-            <span class="country-tag">✅ 100% Remote</span>
-            <span class="country-tag">✅ Hybrid</span>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== CONTACT ===== -->
-  <section id="contact" class="section-dark">
-    <div class="container">
-      <div class="section-header reveal">
-        <span class="section-tag">Let's Talk</span>
-        <h2>Get in Touch</h2>
-        <p>Ready to automate your enterprise processes? Let's discuss your project.</p>
-      </div>
-      <div class="contact-layout">
-
-        <div class="contact-social reveal">
-          <h3>Connect With Me</h3>
-          <a href="https://www.linkedin.com/in/abdessamad-bencheraik-43935a3a5" target="_blank" rel="noopener noreferrer" class="social-btn linkedin" aria-label="LinkedIn profile">
-            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
-            LinkedIn
-          </a>
-          <a href="https://www.instagram.com/appian.maroc" target="_blank" rel="noopener noreferrer" class="social-btn instagram" aria-label="Instagram profile">
-            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
-            Instagram
-          </a>
-          <a href="https://github.com/Bencabdessamad" target="_blank" rel="noopener noreferrer" class="social-btn github-btn" aria-label="GitHub profile">
-            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
-            GitHub
-          </a>
-        </div>
-
-        <div class="contact-form-wrap reveal">
-          <h3>Send a Message</h3>
-
-          <div data-fs-success style="display:none;padding:1rem;background:#10b981;color:white;border-radius:10px;text-align:center;font-weight:500;margin-bottom:16px;">
-            ✅ Message sent successfully! I'll get back to you soon.
-          </div>
-          <div data-fs-error style="display:none;padding:1rem;background:#ef4444;color:white;border-radius:10px;text-align:center;margin-bottom:16px;"></div>
-
-          <form id="contact-form" method="POST">
-            <div class="form-row">
-              <div class="form-group">
-                <label>Full Name</label>
-                <input type="text" name="name" required placeholder="John Doe" data-fs-field />
-                <span data-fs-error="name"></span>
-              </div>
-              <div class="form-group">
-                <label>Company</label>
-                <input type="text" name="company" placeholder="Your company" />
-              </div>
+            <div class="case__visuals">
+              <figure class="diagram" data-diagram="pmis">
+                <figcaption>Architecture: operational data feeds both allocation and forecasting.</figcaption>
+              </figure>
+              <figure class="forecast">
+                <svg class="forecast__svg" viewBox="0 0 520 220" role="img" aria-labelledby="fcTitle fcDesc">
+                  <title id="fcTitle">Illustration of a traffic forecast with a confidence band</title>
+                  <desc id="fcDesc">A line of past vessel visits continues as a dashed forecast line surrounded by a widening shaded band. Values are illustrative.</desc>
+                </svg>
+                <figcaption>Illustrative shape only: history, forecast and confidence interval. Not project data.</figcaption>
+              </figure>
             </div>
-            <div class="form-group">
-              <label>Service Needed</label>
-              <select name="service" required data-fs-field>
-                <option value="">Select a service...</option>
-                <option>Workflow Automation</option>
-                <option>SAIL Interface Design</option>
-                <option>Enterprise Integrations</option>
-                <option>Security &amp; SSO Migration</option>
-                <option>AI-Powered BPM</option>
-                <option>Full Digital Transformation</option>
-                <option>Other</option>
-              </select>
+          </div>
+
+          <ul class="stack" aria-label="Technologies">
+            <li>React Native</li><li>Python</li><li>REST APIs</li><li>SQLite</li><li>Firebase</li><li>Offline sync</li><li>Dashboards &amp; KPIs</li>
+          </ul>
+        </article>
+
+        <div class="case-grid">
+          <!-- Barque -->
+          <article class="case" id="barque" aria-labelledby="barque-title">
+            <header class="case__head">
+              <p class="case__kind">Freelance</p>
+              <h3 id="barque-title">Barque Identification</h3>
+              <p class="case__summary">Identifying fishing vessels in the field with UHF RFID to fight fishing-licence fraud.</p>
+            </header>
+            <figure class="diagram" data-diagram="barque">
+              <figcaption>From a tag on the hull to the licence registry, with or without network.</figcaption>
+            </figure>
+            <dl class="case__facts case__facts--compact">
+              <div><dt>Problem</dt><dd>Confirming a vessel's identity and licence reliably on the ground, including where there is no network.</dd></div>
+              <div><dt>My role</dt><dd>Functional analysis and design of the full RFID chain: tags, readers, application and backend.</dd></div>
+              <div><dt>Build</dt><dd>An Android app for industrial PDA terminals that reads and writes UHF RFID tags, with bidirectional offline synchronisation.</dd></div>
+              <div><dt>Delivery</dt><dd>Field testing with the hardware and delivery of the solution.</dd></div>
+            </dl>
+            <ul class="stack" aria-label="Technologies"><li>Android</li><li>UHF RFID</li><li>Industrial PDA</li><li>Offline sync</li></ul>
+          </article>
+
+          <!-- Service Desk -->
+          <article class="case" id="sdm" aria-labelledby="sdm-title">
+            <header class="case__head">
+              <p class="case__kind">Freelance</p>
+              <h3 id="sdm-title">Service Desk Manager</h3>
+              <p class="case__summary">A mobile companion to an enterprise service desk for change management, tasks and delegation.</p>
+            </header>
+            <figure class="diagram" data-diagram="sdm">
+              <figcaption>The app talks to the service desk through a REST layer; a gateway handles OTP and notifications.</figcaption>
+            </figure>
+            <dl class="case__facts case__facts--compact">
+              <div><dt>Problem</dt><dd>Change requests, tasks and delegations had to be handled away from the desk, securely.</dd></div>
+              <div><dt>My role</dt><dd>Requirements gathering and functional specifications, then the architecture linking the app, REST API, SDM backend and notification gateway.</dd></div>
+              <div><dt>Build</dt><dd>A cross-platform React Native app with OTP authentication.</dd></div>
+              <div><dt>Delivery</dt><dd>Business validation with the client's teams.</dd></div>
+            </dl>
+            <ul class="stack" aria-label="Technologies"><li>React Native</li><li>REST APIs</li><li>OTP</li><li>Push notifications</li></ul>
+          </article>
+
+          <!-- Enterprise BPM -->
+          <article class="case" id="bpm" aria-labelledby="bpm-title">
+            <header class="case__head">
+              <p class="case__kind">CGI</p>
+              <h3 id="bpm-title">Enterprise BPM &amp; Integration</h3>
+              <p class="case__summary">Appian Cloud applications for TotalEnergies. Described at a public level: no internal interfaces, data or architecture.</p>
+            </header>
+            <figure class="diagram" data-diagram="bpm">
+              <figcaption>Generic shape of the work, not the client's architecture.</figcaption>
+            </figure>
+            <dl class="case__facts case__facts--compact">
+              <div><dt>Problem</dt><dd>Business processes that span teams, approvals and systems of record such as SAP.</dd></div>
+              <div><dt>Processes</dt><dd>BPMN 2.0 workflows with multi-level validation, exception handling and dynamic task routing.</dd></div>
+              <div><dt>Integration</dt><dd>Appian to SAP Gateway over secured REST, SOAP services for legacy systems.</dd></div>
+              <div><dt>Identity</dt><dd>Contributed to the single sign-on migration to Microsoft Entra ID (SAML 2.0) and to role-based access control.</dd></div>
+            </dl>
+            <ul class="stack" aria-label="Technologies"><li>Appian Cloud</li><li>BPMN 2.0</li><li>SAIL</li><li>SAP Gateway</li><li>REST / SOAP</li><li>Entra ID</li></ul>
+          </article>
+
+          <!-- IoT -->
+          <article class="case" id="iot" aria-labelledby="iot-title">
+            <header class="case__head">
+              <p class="case__kind">NGSIS internship</p>
+              <h3 id="iot-title">IoT Environment Monitoring</h3>
+              <p class="case__summary">A web application that collects and displays temperature and humidity readings from sensors.</p>
+            </header>
+            <figure class="diagram" data-diagram="iot">
+              <figcaption>Sensor readings stored in PostgreSQL and served to a Vue.js dashboard.</figcaption>
+            </figure>
+            <dl class="case__facts case__facts--compact">
+              <div><dt>Problem</dt><dd>Monitoring environmental conditions continuously instead of through manual readings.</dd></div>
+              <div><dt>My role</dt><dd>Needs analysis, technical specifications and development of both tiers.</dd></div>
+              <div><dt>Build</dt><dd>Java Spring Boot backend (JPA, Hibernate), Vue.js frontend consuming REST APIs, PostgreSQL schema.</dd></div>
+            </dl>
+            <ul class="stack" aria-label="Technologies"><li>Java</li><li>Spring Boot</li><li>Vue.js</li><li>PostgreSQL</li></ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Experience ===== -->
+    <section class="experience section" id="experience" aria-labelledby="experience-title">
+      <div class="wrap">
+        <h2 class="display" id="experience-title">Career path.</h2>
+
+        <ol class="timeline" id="timeline">
+          <li class="timeline__item is-current">
+            <div class="timeline__when"><time datetime="2024-10">Oct 2024</time> to present</div>
+            <div class="timeline__what">
+              <h3>Software Engineer, BPM Developer</h3>
+              <p class="timeline__org">CGI Technologies and Solutions, Rabat (hybrid)</p>
+              <ul>
+                <li>Requirements workshops, functional and technical specifications for Appian Cloud applications serving TotalEnergies.</li>
+                <li>BPMN 2.0 workflows, reusable SAIL interfaces, intelligent forms and KPI dashboards; Records, data models and optimised SQL.</li>
+                <li>Appian to SAP Gateway integration over secured REST; SOAP services for legacy systems.</li>
+                <li>Contribution to the SSO migration to Microsoft Entra ID (SAML 2.0) and to RBAC.</li>
+                <li>Testing, UAT and production support through Jira and ServiceNow in Scrum.</li>
+              </ul>
             </div>
-            <div class="form-group">
-              <label>Message</label>
-              <textarea name="message" required placeholder="Describe your project..." data-fs-field></textarea>
-              <span data-fs-error="message"></span>
+          </li>
+          <li class="timeline__item">
+            <div class="timeline__when"><time datetime="2024-04">Apr 2024</time> to <time datetime="2024-09">Sep 2024</time></div>
+            <div class="timeline__what">
+              <h3>Software Engineer Intern</h3>
+              <p class="timeline__org">CGI, Rabat</p>
+              <ul>
+                <li>iOS and Android mobile development and Appian BPM workflow implementation.</li>
+                <li>Bug-fix and evolution tickets in an application maintenance context.</li>
+                <li>Unit and functional tests, technical and end-user documentation.</li>
+              </ul>
             </div>
-            <input type="hidden" name="_subject" value="New Project Inquiry - Appian BPM Portfolio" />
-            <button type="submit" class="btn-submit" data-fs-submit-btn>Send Message →</button>
-          </form>
+          </li>
+          <li class="timeline__item">
+            <div class="timeline__when"><time datetime="2023-01">Jan 2023</time> to <time datetime="2024-09">Sep 2024</time></div>
+            <div class="timeline__what">
+              <h3>Mobile Developer &amp; Functional Analyst</h3>
+              <p class="timeline__org">Freelance, remote</p>
+              <ul>
+                <li>Delivered the <a href="#pmis">Port Management Information System</a>, <a href="#barque">Barque Identification</a> and <a href="#sdm">Service Desk Manager</a>.</li>
+                <li>Offline-first architectures with bidirectional sync, OTP and token-based authentication, local encryption, Firebase notifications.</li>
+                <li>Integrated native SDKs, REST and SOAP APIs and hardware peripherals.</li>
+              </ul>
+            </div>
+          </li>
+          <li class="timeline__item">
+            <div class="timeline__when"><time datetime="2023-04">Apr 2023</time> to <time datetime="2023-06">Jun 2023</time></div>
+            <div class="timeline__what">
+              <h3>Software Developer Intern</h3>
+              <p class="timeline__org">NGSIS, remote</p>
+              <ul>
+                <li>Built the <a href="#iot">IoT environment monitoring</a> application with Spring Boot, Vue.js and PostgreSQL.</li>
+              </ul>
+            </div>
+          </li>
+          <li class="timeline__item">
+            <div class="timeline__when"><time datetime="2022-06">Jun 2022</time> to <time datetime="2022-08">Aug 2022</time></div>
+            <div class="timeline__what">
+              <h3>Web &amp; Mobile Developer Intern</h3>
+              <p class="timeline__org">Thinline Ltd., Rabat</p>
+              <ul>
+                <li>Web and mobile applications with React, React Native and Ionic; UX and UI improvements from user-needs analysis.</li>
+                <li>Performance work and new features in an Agile team.</li>
+              </ul>
+            </div>
+          </li>
+        </ol>
+
+        <h3 class="subhead" id="education">Education</h3>
+        <ul class="edu">
+          <li>
+            <span class="edu__when">2024 to 2026</span>
+            <span class="edu__what">Master's, Computer Science &amp; Applied Artificial Intelligence</span>
+            <span class="edu__where">Faculty of Sciences, Mohammed V University, Rabat</span>
+          </li>
+          <li>
+            <span class="edu__when">2023 to 2024</span>
+            <span class="edu__what">Professional Bachelor's, Mobile Application Engineering</span>
+            <span class="edu__where">Higher School of Technology Salé, Mohammed V University</span>
+          </li>
+          <li>
+            <span class="edu__when">2021 to 2023</span>
+            <span class="edu__what">University Technology Diploma (DUT), Software Engineering</span>
+            <span class="edu__where">Higher School of Technology Salé, Mohammed V University</span>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ===== Contact ===== -->
+    <section class="contact section" id="contact" aria-labelledby="contact-title">
+      <canvas class="contact__canvas" id="coreEcho" aria-hidden="true"></canvas>
+      <div class="wrap contact__grid">
+        <div class="contact__intro">
+          <h2 class="display" id="contact-title">Have a complex problem? Let's engineer the solution.</h2>
+          <p>
+            Open to BPM, integration and full-stack roles and projects, remote or hybrid.
+            Tell me what the process looks like today and where it hurts.
+          </p>
+          <ul class="contact__links">
+            <li><a href="https://www.linkedin.com/in/abdessamad-bencheraik-43935a3a5" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+            <li><a href="https://github.com/Bencabdessamad" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+            <li><a href="https://www.instagram.com/appian.maroc" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+          </ul>
         </div>
 
+        <form class="form" id="contact-form" method="POST" novalidate>
+          <div class="form__row">
+            <label class="field">
+              <span>Name</span>
+              <input type="text" name="name" required autocomplete="name" data-fs-field />
+              <span class="field__error" data-fs-error="name"></span>
+            </label>
+            <label class="field">
+              <span>Email</span>
+              <input type="email" name="email" required autocomplete="email" data-fs-field />
+              <span class="field__error" data-fs-error="email"></span>
+            </label>
+          </div>
+          <label class="field">
+            <span>Company <em>(optional)</em></span>
+            <input type="text" name="company" autocomplete="organization" />
+          </label>
+          <label class="field">
+            <span>What do you need?</span>
+            <select name="topic" required data-fs-field>
+              <option value="">Choose one</option>
+              <option>Appian BPM &amp; workflow automation</option>
+              <option>Enterprise integration or SSO</option>
+              <option>Web or mobile application</option>
+              <option>Applied AI or decision support</option>
+              <option>A role on my team</option>
+              <option>Something else</option>
+            </select>
+          </label>
+          <label class="field">
+            <span>Message</span>
+            <textarea name="message" rows="5" required data-fs-field></textarea>
+            <span class="field__error" data-fs-error="message"></span>
+          </label>
+          <input type="hidden" name="_subject" value="New message from portfolio" />
+          <button type="submit" class="btn btn--primary" data-fs-submit-btn>Send message</button>
+          <p class="form__status form__status--ok" data-fs-success style="display:none">Message sent. I'll reply by email.</p>
+          <p class="form__status form__status--err" data-fs-error role="alert"></p>
+        </form>
       </div>
-    </div>
-  </section>
+    </section>
+  </main>
 
-  <!-- ===== FOOTER ===== -->
-  <footer id="footer">
-    <div class="container footer-inner">
-      <div class="footer-logo">AB<span>.</span></div>
-      <p class="footer-copy">© 2026 Abdessamad Bencheraik. All rights reserved.</p>
-      <div class="footer-socials">
-        <a href="https://www.linkedin.com/in/abdessamad-bencheraik-43935a3a5" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
-        </a>
-        <a href="https://www.instagram.com/appian.maroc" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
-          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
-        </a>
-        <a href="https://github.com/Bencabdessamad" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
-          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
-        </a>
-      </div>
+  <footer class="footer">
+    <div class="wrap footer__inner">
+      <p>© <span id="year">2026</span> Abdessamad Bencheraik, Rabat</p>
+      <a href="#top">Back to top</a>
     </div>
   </footer>
 
-  <!-- ===== BACK TO TOP ===== -->
-  <button class="back-to-top" id="backToTop" aria-label="Back to top">↑</button>
-
-  <script src="js/main.js"></script>
+  <script src="js/main.js" defer></script>
   <script>
-    window.formspree = window.formspree || function() {
-      (formspree.q = formspree.q || []).push(arguments);
-    };
+    window.formspree = window.formspree || function () { (formspree.q = formspree.q || []).push(arguments); };
     formspree('initForm', { formElement: '#contact-form', formId: 'mkokylpj' });
   </script>
   <script src="https://unpkg.com/@formspree/ajax@1" defer></script>
