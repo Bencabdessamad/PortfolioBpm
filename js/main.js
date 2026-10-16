@@ -73,7 +73,7 @@
     var pointer = { x: 0, y: 0 }, tilt = { x: 0, y: 0 };
     var rings = [], particles = [], tokens = [];
     var running = false, visible = true, raf = 0, last = 0, time = 0, scrollShift = 0;
-    var small = false;
+    var small = false, avoidRight = -1;
 
     var ringDefs = [
       { inc: 1.15, node: 0.0, speed: 0.16 },
@@ -91,6 +91,14 @@
       canvas.height = Math.round(H * DPR);
       ctx.setTransform(DPR, 0, 0, DPR, 0, 0);
       small = W < 900;
+      avoidRight = -1;
+      if (opts.avoid) {
+        var crect = canvas.getBoundingClientRect();
+        opts.avoid.forEach(function (el) {
+          var r = el.getBoundingClientRect();
+          avoidRight = Math.max(avoidRight, r.right - crect.left + 18);
+        });
+      }
       var c = opts.center(W, H, small);
       cx = c.x; cy = c.y; R = c.r;
 
@@ -282,6 +290,7 @@
           if (!rings[n].label) continue;
           var nd = nodes[n];
           var right = nd.x >= core.x;
+          if (!right && nd.x - 14 - ctx.measureText(rings[n].label).width < avoidRight) right = true;
           ctx.textAlign = right ? 'left' : 'right';
           ctx.fillStyle = 'rgba(200,205,240,' + clamp(0.35 + nd.k * 0.45, 0, 0.9).toFixed(3) + ')';
           ctx.fillText(rings[n].label, nd.x + (right ? 14 : -14), nd.y);
@@ -330,6 +339,7 @@
     if (heroCanvas) {
       createCore(heroCanvas, {
         interactive: true,
+        avoid: $$('.hero__lede, .hero__sub'),
         labels: ['Processes', 'Applications', 'APIs', 'Automation', 'Data & AI'],
         center: function (w, h, small) {
           return small
@@ -409,12 +419,26 @@
     var byId = {};
     DOMAINS.forEach(function (d) { byId[d.id] = d; });
 
-    var lineEls = LINKS.map(function (l) {
+    var hub = DOMAINS[0];
+    [150, 270, 390].forEach(function (r) {
+      svg.appendChild(svgEl('ellipse', { cx: hub.x, cy: hub.y, rx: r * 1.15, ry: r * 0.62, 'class': 'ring' }));
+    });
+    var seed = 11;
+    for (var st = 0; st < 46; st++) {
+      seed = (seed * 16807) % 2147483647; var sx = seed % 1000;
+      seed = (seed * 16807) % 2147483647; var sy = seed % 560;
+      svg.appendChild(svgEl('circle', { cx: sx, cy: sy, r: (st % 3) * 0.5 + 0.8, 'class': 'star' }));
+    }
+    var lineEls = [];
+    LINKS.forEach(function (l) {
       var a = byId[l[0]], b = byId[l[1]];
-      var line = svgEl('line', { x1: a.x, y1: a.y, x2: b.x, y2: b.y });
-      line._ids = l;
-      svg.appendChild(line);
-      return line;
+      ['', 'flow'].forEach(function (cls) {
+        var line = svgEl('line', { x1: a.x, y1: a.y, x2: b.x, y2: b.y });
+        if (cls) line.setAttribute('class', cls);
+        line._ids = l;
+        svg.appendChild(line);
+        lineEls.push(line);
+      });
     });
 
     var buttons = DOMAINS.map(function (d, i) {
@@ -449,7 +473,18 @@
       });
       if (focus) buttons[i].focus();
       panel.setAttribute('aria-labelledby', 'tab-' + d.id);
-      lineEls.forEach(function (l) { l.classList.toggle('is-lit', l._ids.indexOf(d.id) !== -1); });
+      lineEls.forEach(function (l) {
+        var on = l._ids.indexOf(d.id) !== -1;
+        l.classList.toggle('is-lit', on);
+        // tokens always travel away from the selected domain
+        if (on && l._ids[1] === d.id) {
+          var a = byId[l._ids[1]], b = byId[l._ids[0]];
+          l.setAttribute('x1', a.x); l.setAttribute('y1', a.y); l.setAttribute('x2', b.x); l.setAttribute('y2', b.y);
+        } else if (on) {
+          var c = byId[l._ids[0]], e = byId[l._ids[1]];
+          l.setAttribute('x1', c.x); l.setAttribute('y1', c.y); l.setAttribute('x2', e.x); l.setAttribute('y2', e.y);
+        }
+      });
 
       panel.innerHTML = '';
       var h = document.createElement('h3'); h.className = 'panel__title'; h.textContent = d.name;
@@ -612,7 +647,7 @@
       entries.forEach(function (e) {
         if (e.isIntersecting) { e.target.classList.add('is-drawn'); figObs.unobserve(e.target); }
       });
-    }, { threshold: 0.25 });
+    }, { threshold: 0.05, rootMargin: '0px 0px 10% 0px' });
     figs.forEach(function (f) { figObs.observe(f); });
   } else {
     figs.forEach(function (f) { f.classList.add('is-drawn'); });
