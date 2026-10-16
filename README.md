@@ -1,16 +1,26 @@
 # Abdessamad Bencheraik — Portfolio
 
-Professional portfolio website for Abdessamad Bencheraik, First Moroccan Appian Developer.
+Personal portfolio of Abdessamad Bencheraik, Software Engineer in Rabat: enterprise BPM (Appian), systems integration, full-stack and mobile development, and applied AI.
 
 **Live site:** https://bencabdessamad.github.io/PortfolioBpm
 
-## Tech Stack
-- Vanilla HTML5, CSS3, JavaScript (no frameworks)
-- Google Fonts: Syne + DM Sans
-- Deployed via GitHub Actions → GitHub Pages
+## Stack
+- Vanilla HTML, CSS and JavaScript, no build step and no dependencies
+- Hero and contact visuals: procedural 3D scene drawn on Canvas 2D (`js/main.js`, `createCore`)
+- Expertise constellation, architecture diagrams and the forecast illustration are generated from data objects in `js/main.js` (`DOMAINS`, `DIAGRAMS`)
+- Fonts: Bricolage Grotesque, Instrument Sans, JetBrains Mono (Google Fonts)
+- Contact form: Formspree (form id `mkokylpj`)
+- Deployed by GitHub Actions to GitHub Pages on every push to `main`
 
-## Setup
-After pushing to `main`, go to:  
-**Settings → Pages → Source: GitHub Actions → Save**
+## Run locally
+```bash
+python -m http.server 8000
+# then open http://localhost:8000
+```
 
-The site will be live at `https://bencabdessamad.github.io/PortfolioBpm`
+## Editing content
+- Text, projects, experience and education live in `index.html`.
+- Expertise domains and tools: `DOMAINS` in `js/main.js`.
+- Project diagrams: `DIAGRAMS` in `js/main.js`.
+
+Animations respect `prefers-reduced-motion`, and the canvas pauses when off-screen.
